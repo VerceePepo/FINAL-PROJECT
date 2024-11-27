@@ -14,31 +14,19 @@ from PySide2 import QtCore, QtGui, QtWidgets
 class Ui_SecondaryWindow(object):
     def setupUi(self, SecondaryWindow):
         SecondaryWindow.setObjectName("SecondaryWindow")
-        SecondaryWindow.resize(400, 250)
-        SecondaryWindow.setMinimumSize(QtCore.QSize(400, 250))
-        SecondaryWindow.setMaximumSize(QtCore.QSize(400, 250))
+        SecondaryWindow.resize(700, 465)
+        SecondaryWindow.setMinimumSize(QtCore.QSize(700, 465))
+        SecondaryWindow.setMaximumSize(QtCore.QSize(700, 465))
         self.centralwidget = QtWidgets.QWidget(SecondaryWindow)
-        self.centralwidget.setGeometry(QtCore.QRect(0, 10, 400, 250))
-        self.centralwidget.setMinimumSize(QtCore.QSize(400, 250))
-        self.centralwidget.setMaximumSize(QtCore.QSize(400, 250))
+        self.centralwidget.setGeometry(QtCore.QRect(0, 10, 700, 465))
+        self.centralwidget.setMinimumSize(QtCore.QSize(700, 465))
+        self.centralwidget.setMaximumSize(QtCore.QSize(700, 465))
         self.centralwidget.setCursor(QtGui.QCursor(QtCore.Qt.PointingHandCursor))
         self.centralwidget.setMouseTracking(False)
-        self.centralwidget.setStyleSheet("QWidget#centralwidget {\n"
-"    background-image: url(/home/pepo/PROYECTO FINAL/imagenes/secundaria.jpg);\n"
-"    background-repeat: no-repeat;\n"
-"    background-position: center;\n"
-"    background-size: cover;\n"
-"}\n"
-"QLabel {\n"
-"    background: none;  /* Asegúrate de que los QLabel no tengan fondo */\n"
-"}\n"
-"QPushButton {\n"
-"    background: none;  /* Asegúrate de que los QPushButton no tengan fondo */\n"
-"}\n"
-"")
+        self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
         self.botonVolver = QtWidgets.QPushButton(self.centralwidget)
-        self.botonVolver.setGeometry(QtCore.QRect(10, 10, 80, 23))
+        self.botonVolver.setGeometry(QtCore.QRect(20, 10, 151, 61))
         self.botonVolver.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "    border: none;\n"
@@ -46,7 +34,7 @@ class Ui_SecondaryWindow(object):
         self.botonVolver.setText("")
         self.botonVolver.setObjectName("botonVolver")
         self.botonContra = QtWidgets.QPushButton(self.centralwidget)
-        self.botonContra.setGeometry(QtCore.QRect(110, 30, 161, 51))
+        self.botonContra.setGeometry(QtCore.QRect(190, 60, 291, 91))
         self.botonContra.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "    border: none;\n"
@@ -54,7 +42,7 @@ class Ui_SecondaryWindow(object):
         self.botonContra.setText("")
         self.botonContra.setObjectName("botonContra")
         self.botonArchivo = QtWidgets.QPushButton(self.centralwidget)
-        self.botonArchivo.setGeometry(QtCore.QRect(110, 90, 161, 51))
+        self.botonArchivo.setGeometry(QtCore.QRect(190, 160, 281, 81))
         self.botonArchivo.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "    border: none;\n"
@@ -62,7 +50,7 @@ class Ui_SecondaryWindow(object):
         self.botonArchivo.setText("")
         self.botonArchivo.setObjectName("botonArchivo")
         self.botonDatos = QtWidgets.QPushButton(self.centralwidget)
-        self.botonDatos.setGeometry(QtCore.QRect(110, 140, 161, 51))
+        self.botonDatos.setGeometry(QtCore.QRect(190, 260, 301, 81))
         self.botonDatos.setMinimumSize(QtCore.QSize(80, 20))
         self.botonDatos.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
@@ -71,13 +59,24 @@ class Ui_SecondaryWindow(object):
         self.botonDatos.setText("")
         self.botonDatos.setObjectName("botonDatos")
         self.boto_cambiar_contra = QtWidgets.QPushButton(self.centralwidget)
-        self.boto_cambiar_contra.setGeometry(QtCore.QRect(110, 200, 161, 51))
+        self.boto_cambiar_contra.setGeometry(QtCore.QRect(190, 360, 311, 81))
         self.boto_cambiar_contra.setStyleSheet("QPushButton {\n"
 "    background-color: transparent;\n"
 "    border: none;\n"
 "}")
         self.boto_cambiar_contra.setText("")
         self.boto_cambiar_contra.setObjectName("boto_cambiar_contra")
+        self.label = QtWidgets.QLabel(self.centralwidget)
+        self.label.setGeometry(QtCore.QRect(0, -10, 711, 471))
+        self.label.setText("")
+        self.label.setPixmap(QtGui.QPixmap("imagenes\secundaria.jpg"))
+        self.label.setObjectName("label")
+        self.label.raise_()
+        self.botonVolver.raise_()
+        self.botonContra.raise_()
+        self.botonArchivo.raise_()
+        self.botonDatos.raise_()
+        self.boto_cambiar_contra.raise_()
         self.menubar = QtWidgets.QMenuBar(SecondaryWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 400, 20))
         self.menubar.setObjectName("menubar")
